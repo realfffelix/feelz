@@ -30,26 +30,3 @@ unsigned short 	*readblock(int fd)
 	}
 	return (block);
 }
-		
-		
-		
-
-unsigned short	binary_block(char *str)
-{
-	int i;
-	unsigned short block;
-	int pow;
-	
-	if (!str)
-		return (NULL);
-	i = ft_strlen(str) + 1;
-	pow = 1;
-	block = 0;
-	while (str[--i])
-	{
-		if (str[i] == '#')
-			block += (str[i] - '0') * pow;
-		pow *= 2;
-	}
-	return (block);
-	
