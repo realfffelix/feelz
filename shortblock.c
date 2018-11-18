@@ -18,7 +18,7 @@ unsigned short 	*readblock(int fd)
 			if (tmp != '\n')
 				return (0);
 		}
-		else if (tmp = '#' && tmp != '.')
+		else if (tmp != '#' && tmp != '.')
 			return (0);
 		else
 		{
